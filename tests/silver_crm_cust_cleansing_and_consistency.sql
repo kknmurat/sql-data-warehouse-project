@@ -13,6 +13,12 @@ select cst_key
 	from silver.crm_cust_info cci 
 	where cst_key != trim(cst_key);
 
+--Check for NULLs or Negative Numbers
+
+select prd_cost
+	fom silver.crm_prd_info
+	where prd_cost <0 or prd_cost is null;
+
 --Data Standardization & Consistency
 
 select distinct cst_marital_status 
