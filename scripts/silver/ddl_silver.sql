@@ -28,29 +28,29 @@ CREATE TABLE silver.crm_cust_info (
 
 CREATE TABLE silver.crm_prd_info (
 	prd_id int4 NULL,
+	cat_id varchar NULL,
 	prd_key varchar NULL,
 	prd_nm varchar NULL,
 	prd_cost int4 NULL,
 	prd_line varchar NULL,
 	prd_start_dt date NULL,
-	prd_end_dt date null,
-	dwh_create_date timestamp default current_timestamp
-
+	prd_end_dt date NULL,
+	dwh_create_date timestamp DEFAULT CURRENT_TIMESTAMP NULL
 );
 
 -- silver.crm_sales_details definition
 
 -- Drop table
 
--- DROP TABLE silver.crm_sales_details;
+ --DROP TABLE silver.crm_sales_details;
 
 CREATE TABLE silver.crm_sales_details (
 	sls_ord_num varchar NULL,
 	sls_prd_key varchar NULL,
 	sls_cust_id int4 NULL,
-	sls_order_dt int4 NULL,
-	sls_ship_dt int4 NULL,
-	sls_due_dt int4 NULL,
+	sls_order_dt date NULL,
+	sls_ship_dt date NULL,
+	sls_due_dt date NULL,
 	sls_sales int4 NULL,
 	sls_quantity int4 NULL,
 	sls_price int4 null,
