@@ -24,7 +24,17 @@ select prd_cost
 select distinct cst_marital_status 
 from silver.crm_cust_info cci ;
 
+select distinct gen 
+	from bronze.erp_cust_az12;
+
 --Check for invalid Date Orders 
 
 select * from bronze.crm_prd_info
-where prd_end_dt < prd_start_dt
+where prd_end_dt < prd_start_dt;
+
+--Identify Out Of Range Dates
+
+select distinct 
+bdate 
+from bronze.erp_cust_az12
+where bdate <'1924-01-01' OR bdate > current_date;
