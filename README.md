@@ -46,7 +46,7 @@ Develop SQL-based analytics to deliver detailed insights into:
   ## Architecture
 
   The data architecture for this project follows Medallion Architecture **Bronze**, **Silver**, and **Gold** layers:
-![Data Architecture](docs/High Level Architecture.png)
+![Data Architecture](docs/High Level Architecture.jpg)
 
 
   
